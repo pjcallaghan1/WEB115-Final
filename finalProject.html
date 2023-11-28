@@ -2,29 +2,34 @@
 <hmtl>
     
     <head>
+        <style>
+            body {background-color:#F8D4BA}
+            table, th, td {border: 1px solid black; border-collapse: collapse;}
+            td {height: 75px}
+        </style>
         <title>WEB-115 Final Project</title>
         <image src="Build a Meal Plan.png"  width="1382" height="280"></image><br>
     </head>
-    <body style="background-color:#F8D4BA">
-        <script src="projectJS.js"></script>
-        Please fill in the boxes with desired meals that you plan through out the week.
+    <body >
         
-        
-                
+        Please fill in the boxes with desired meals that you plan through out the week.       
         <form>
-            <table style="border:1px solid black">
+            Enter Full Name: <input id="name"><br>
+            Enter Email: <input id="email"><br>
+            Enter Goal of the Week: <input id="goal"><br>
+            <table>
             <tr>
                 <th></th>
-                <th style="border:1px solid black">Monday</th>
-                <th style="border:1px solid black">Tuesday</th>
-                <th style="border:1px solid black">Wednesday</th>
-                <th style="border:1px solid black">Thursday</th>
-                <th style="border:1px solid black">Friday</th>
-                <th style="border:1px solid black">Saturday</th>
-                <th style="border:1px solid black">Sunday</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+                <th>Sunday</th>
             </tr>
             <tr>
-                <td>Breakfast</td>
+                <th>Breakfast</th>
                 <td><input id=bfMon></td>
                 <td><input id=bfTue></td>
                 <td><input id=bfWed></td>
@@ -34,7 +39,7 @@
                 <td><input id=bfSun></td>
             </tr>
             <tr>
-                <td>Morning Snack</td>
+                <th>Morning Snack</th>
                 <td><input id=sn1Mon></td>
                 <td><input id=sn1Tue></td>
                 <td><input id=sn1Wed></td>
@@ -42,8 +47,9 @@
                 <td><input id=sn1Fri></td>
                 <td><input id=sn1Sat></td>
                 <td><input id=sn1Sun></td>
-            </tr><tr>
-                <td>Lunch</td>
+            </tr>
+            <tr>
+                <th>Lunch</th>
                 <td><input id=lunMon></td>
                 <td><input id=lunTue></td>
                 <td><input id=lunWed></td>
@@ -51,8 +57,9 @@
                 <td><input id=lunFri></td>
                 <td><input id=lunSat></td>
                 <td><input id=lunSun></td>
-            </tr><tr>
-                <td>Afternoon Snack</td>
+            </tr>
+            <tr>
+                <th>Afternoon Snack</th>
                 <td><input id=sn2Mon></td>
                 <td><input id=sn2Tue></td>
                 <td><input id=sn2Wed></td>
@@ -60,8 +67,9 @@
                 <td><input id=sn2Fri></td>
                 <td><input id=sn2Sat></td>
                 <td><input id=sn2Sun></td>
-            </tr><tr>
-                <td>Dinner</td>
+            </tr>
+            <tr>
+                <th>Dinner</th>
                 <td><input id=dinMon></td>
                 <td><input id=dinTue></td>
                 <td><input id=dinWed></td>
@@ -71,13 +79,11 @@
                 <td><input id=dinSun></td>
             </tr>
         </table>
-            <input type="reset">
-            <button id="print">Print Planner</button>
-            <button id="download">Download Planner</button><br>
-            Enter Full Name: <input id="name"><br>
-            Enter Email: <input type="email" id="email"><br>
-            Enter Goal of the Week: <input id="goal"><br>
+            <button id="clear">Clear Planner</button>
+            <button id="print" onclick="window.print();return false;">Print Planner</button>
+            <a href="meal_planner.jpg" download>Download Planner</a><br>
             <button id="submit">Submit</button>
         </form>
+        <script src="projectJS.js"></script>
     </body>
 </hmtl>
